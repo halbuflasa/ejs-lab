@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= category %> Menu</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/menu">Full Menu</a>
+        <!-- new links below-->
+        <a href="/menu/mains">Mains</a>
+        <a href="/menu/desserts">Desserts</a>
+        <a href="/menu/sides">Sides</a>
+      </nav>
+    <h1><%= category %></h1>
+    <ul>
+        <% menu.forEach((dish) => { %>
+            <li>
+              Name: <%= dish.name %> <br/>
+              Price: <%= dish.price %> <br/>
+              Rating: <%= dish.rating %> <br/>
+              Details: <%= dish.details %>
+            </li>
+            <p>--------------------------------------------------------------------------------</p>
+        <% }) %>
+      </ul>
+</body>
+</html>
